@@ -1,0 +1,75 @@
+<ion-view view-title="transaction" class="transaction-cn" ng-controller="transactionCTRL">
+	
+	<ion-header-bar align-title="left" class="bar-energized">
+  		<h1 class="title">Transaction</h1>
+  		<button class="button" data-pack="default">
+  			<span  class="ion-plus-circled">
+        </span>
+        </button>
+	</ion-header-bar>
+
+	<ion-content>
+
+
+        <div class="row">
+           <div class="col col-50">
+               <select class="select-box">
+                  <option>year</option>
+                  <option ng-repeat="yrow in years">{{yrow}}</option>
+                </select>
+            </div>
+            <div class="col col-50">
+                <select class="select-box">
+                  <option>Month</option>
+                  <option ng-repeat="mrow in months">{{mrow}}</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col col-50 text-center">
+                <h1>₹1800</h1>
+                <p>current balace</p>
+            </div>
+            <div class="col col-50 text-center">
+                <h1>-₹890</h1>
+                <p>expense</p>
+            </div>
+        </div>
+
+        <div class="list tran-list">
+            <div class="item item-text-wrap">
+                <p>
+                    <strong>$800</strong>
+                </p>
+                <p>
+                    Shoping Clothes
+                </p>
+                <p>
+                    08 Apr 16 04:00 pm
+                </p>
+            </div>
+        </div>
+
+          
+        
+        
+
+		
+  	</ion-content>
+      <script id="my-modal.html" type="text/ng-template">
+      <ion-modal-view>
+      <ion-header-bar>
+        <h1 class="title">My Modal title</h1>
+        </ion-header-bar>
+        <ion-content>
+           Hello!
+        </ion-content>
+      </ion-modal-view>
+      </script>
+
+
+
+</ion-view>
+

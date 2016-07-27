@@ -1,25 +1,30 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>
-  <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
-      </div>
-    </form>
-  </ion-content>
-</ion-modal-view>
+<ion-view view-title="Login" ng-controller="loginCTRL">
+	
+	<ion-header-bar align-title="left" class="bar-energized">
+  		<h1 class="title">Login</h1>
+	</ion-header-bar>
+
+	<ion-content class="login-cn">
+
+		<div class="logo">
+			<span class="ion-social-usd"></span>
+		</div>
+
+		<div class="login-frm">
+			<div class="list">
+				<label class="item item-input">
+					<input type="password" placeholder="Password" ng-model="loginForm.userPassword">
+				</label>				
+			</div>			
+		</div>
+		
+		<button class="button-block button button-energized" ng-click="doLogin()">
+		 	 Login
+		</button>
+
+		<p class="error-text" ng-show="loginForm.showError">
+			Password is invalid
+		</p>
+
+  	</ion-content>
+</ion-view>

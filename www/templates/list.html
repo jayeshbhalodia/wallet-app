@@ -1,0 +1,52 @@
+<style type="text/css">
+	.border input {
+		width: 100%;
+	}
+	.mar {
+		margin-top: -5px;
+		margin-left: 2 x;
+	}
+	.pull-right {
+		float:right;
+	}
+	.fnt {
+		font-size: 30px;
+	}
+
+
+</style>
+
+
+
+<div ng-controller="listCTRL">
+	
+	
+	<ion-header-bar align-title="left" class="bar-positive">
+		<h1 class="title">List</h1>
+	</ion-header-bar>
+
+	<ion-content >
+		<ion-list>
+		  <ion-item ng-repeat="item in usedata">
+		  <span class="ion-close-circled pull-right fnt" data-pack="default" data-tags="delete, trash, kill, x" ng-click="remove($index)"></span>								
+		   {{item}}
+		  </ion-item>
+		</ion-list>
+
+		</ion-content>
+
+
+	<ion-footer-bar>
+		<form ng-submit="addAction()">
+			<div class="row">
+				<div class="col col-80 border">
+					<input type="text" value="text" ng-model="inputmodel">
+				</div>
+				<div class="col col-20">
+					<button type="submit" >Add</button>
+				</div>
+			</div>
+		</form>
+	</ion-footer-bar>
+
+</div>

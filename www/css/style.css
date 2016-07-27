@@ -1,1 +1,7 @@
 /* Empty. Add your own CSS if you like */
+
+.login-cn .error-text {
+    padding-top: 20px;
+    color: red;
+    text-align: center;
+}

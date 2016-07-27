@@ -1,0 +1,21 @@
+<ion-view view-title="User" ng-controller="userCTRL">
+	
+	<ion-header-bar align-title="left" class="bar-energized">
+  		<h1 class="title">User</h1>
+	</ion-header-bar>
+
+
+	<ion-content class="user-cn">
+
+
+		<div class="list">
+			<a class="item item-avatar"  ng-repeat="userRow in users" ng-click="clickAction(userRow)">
+				<img src="img/{{userRow.image}}">
+				<h2>{{userRow.name}}</h2>
+			</a>
+		</div>
+		
+  	</ion-content>
+</ion-view>
+
+                                                                                                                                                                                                                                                                 
